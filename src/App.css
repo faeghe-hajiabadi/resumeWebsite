@@ -1,45 +1,207 @@
-.container {
+
+
+
+.App {
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+.Nav{
+  /* background-color: #e3f2fd; */
+  align-items: center;
+  font-size: 14;
+  font-family: Lato, Arial, sans-serif;
+  font-style: bold;
+  min-height: 80px;
+ 
+  
+  
+}
+
+.Nav a:hover{
+
+ color:black !important;
+  text-decoration: none;
+  /* color: #a7a7a7 !important; */
+  
+  }
+  
+  body {
+    /* background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='0' y='15' fill='red' font-size='20'>I love SVG!</text></svg>"); */
+}
+.intro{
+  padding: 95px 0px 70px 0px;
+  overflow-x: hidden;
   display: flex;
 
+  flex-direction: column;
+  justify-content:center;
 }
 
-.column1{
-  width: 30%;
-  align-self:flex-start
 
+.name{
+  margin-bottom: 1.65em;
+  align-self: flex-start;
+  font-family: "Lato",Arial,sans-serif;
+  flex:1;
+  font-size: small;
+}
+.first_container{
+  margin: auto;
+  max-width: 662px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  /* justify-content:center; */
+}
+.image_container{
+  display: flex;
+  /* align-content: space-between; */
+  
+}
+.img{
+  width: 81px;
+  height: 81px;
+  border-radius: 99px;
+  align-self: center;
+  margin-right: 2%;
+}
+.h{
+  margin-bottom: 30px;
+}
+.paraghraph{
+  margin-top: 10px;
+  color: #4e4e4e;
+  text-align: justify;
+  text-align-last: left;
+}
+.image_container h1 {
+  color: black;
+  align-self: center;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(160, 160, 160); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: typing 5s steps(30, end), blink .75s step-end infinite;
+    
+}
+@media (max-width: 500px) {
+  .image_container h1{
+    font-size: 14px;
+  }
+  .paraghraph{
+    font-size: 14px;
+  }
+}
 
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 75% }
 }
-.column2{
-  width: 70%;
-  align-self:flex-end
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(95, 95, 95) }
 }
-.showMeMore{
+.footer_img{
+  width: 100%;
+  height: 30%;
+  align-self: center;
+  margin: auto;
+  padding: 20px 0px;
+  margin-top: 120px;
   position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 4px;
-  padding: 0 16px;
-  min-width: 64px;
-  height: 36px;
-  width: 30%;
-  vertical-align: middle;
-  text-align: center;
-  text-overflow: ellipsis;
-  text-transform: uppercase;
-  color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
-  background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 36px;
-  overflow: hidden;
-  outline: none;
-  cursor: pointer;
-  transition: box-shadow 0.2s;
-  align-self:center
 }
-.showMeMore:hover, .btn:focus {
-  background-color: #27ae60;
+.bookImageContainer{
+  
+  background-image: url('./images/book.png');
+  background-repeat: no-repeat;
+  min-height: 200px;
+   width: 100%;
+   /* position: absolute */
+   background-size: cover;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+.image{
+  width: 100%;
+  overflow: hidden;
+  /* height: 10%; */
+ 
+}
+.footer-container{
+ 
+  margin: auto;
+
+  width:100%;
+
+
+}
+.quote-text{
+  opacity: .4; 
+  background-color: #fff
+}
+
+.quote{
+  background-color: rgb(255, 255, 255);
+  opacity: .4; 
+  text-align: justify;
+  text-align-last: left;
+  margin: 100px 0px;
+  padding: 40px 20px;
+  border: 5px solid #fff;
+  color: black;
+  font-family: "Playfair Display SC",serif
+}
+.socialMediaIconContainer{
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: center;
+  text-align: justify;
+  text-align-last: left;
+
+
+}
+.textSocial{
+  align-self: flex-start;
+  padding-right: 20px;
+  font-size: 0.9375em;
+  color: #8c8c8c;
+  text-align: justify;
+  text-align-last: left;
+}
+.icon{
+margin-right: 10px;
+margin-left: 10px;
+color: #4e4e4e;
+  
+}
+.icon:hover{
+  color: #8c8c8c;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-content: center;
+  max-width: 662px;
+  padding: 0 20px;
+
+}
+.skills{
+  font-family: "Playfair Display SC",serif;
+  color: #8c8c8c;
+  text-align: justify;
+  text-align-last: left;
+  margin-bottom: 40px;
 }

@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start !important;
+    margin-top: 10px;
+}
+.date{
+    font-size: 0.9375em;
+    color: #8c8c8c;
+    align-self:flex-start
+}
+.company{
+
+    font-size: 1.1875em;
+    font-weight: 700;
+    align-self:flex-start;
+    text-decoration: none;
+    border-bottom: 1px solid #b3b3b3;
+    text-align: justify;
+    text-align-last: left;
+}
+.education{
+    font-size: 1.1875em;
+    font-weight: 700;
+    align-self:flex-start;
+    text-decoration: none;
+    text-align: justify;
+    text-align-last: left;
+}
+.job{
+    font-size: 0.9375em;
+    color: #8c8c8c;
+    align-self:flex-start;
+    margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+    .company h1{
+      font-size: 14px;
+    }
+    .education{
+      font-size: 14px;
+    }
+  }

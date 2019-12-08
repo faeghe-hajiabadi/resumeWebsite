@@ -1,0 +1,91 @@
+.App {
+  text-align: center;
+}
+
+.Nav{
+  /* background-color: #e3f2fd; */
+  align-items: center;
+  font-size: 14;
+  font-family: Lato, Arial, sans-serif;
+  font-style: bold;
+  min-height: 80px;
+
+  
+}
+
+.Nav a:hover{
+
+  font-weight:bold;
+  /* color: #a7a7a7 !important; */
+  
+  }
+  
+  body {
+    /* background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='0' y='15' fill='red' font-size='20'>I love SVG!</text></svg>"); */
+}
+.intro{
+  padding: 95px 0px 70px 0px;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+.name{
+  margin-bottom: 1.65em;
+  align-self: flex-start;
+  font-family: "Lato",Arial,sans-serif;
+  flex:1;
+  font-size: small;
+}
+.first_container{
+  margin: auto;
+  max-width: 662px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  /* justify-content:center; */
+}
+.image_container{
+  display: flex;
+  align-content: space-between;
+  
+}
+.img{
+  width: 81px;
+  height: 81px;
+  border-radius: 99px;
+  align-self: center;
+  margin-right: 2%;
+}
+.h{
+  margin-bottom: 30px;
+}
+.paraghraph{
+  margin-top: 10px;
+}
+.image_container h1 {
+  color: black;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(160, 160, 160); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+    
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(95, 95, 95) }
+}

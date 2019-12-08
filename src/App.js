@@ -1,99 +1,92 @@
 import React from 'react';
-
+import me from './images/me.png';
 import './App.css';
-import { connect } from 'react-redux'
-import { loadProductData, loadCategory, deleteProducts } from "./actions/index";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Partition from './components/Partition';
+import Skills from './components//Skills';
+import Education from './components//Education';
+import { Link } from 'react-router-dom'
 
-import Feed from './components/Feed';
-import Category from './components/Category';
+// import { Button, Card, CardBody, CardGroup, Col, Container, Input, InputGroup, InputGroupAddon, InputGroupText, Row, NavLink  } from 'reactstrap';
 
-
-
-
-// const responsedCats;
-
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      products: 0,
-      choosedFilter: null
-    }
-  }
-
-  componentDidMount() {
-    this.props.loadProductData(1);
-    this.props.loadCategory();
-
-  }
-  showMore() {
-    const { choosedFilter } = this.state;
-    this.props.loadProductData(
-      this.props.lastLoadedPageNumber + 1,
-      choosedFilter ? choosedFilter.id : undefined
-    );
-  }
-  chooseFilter(typeOfCats) {
-    this.props.deleteProducts();
-    this.props.loadProductData(this.props.lastLoadedPageNumber, typeOfCats.id);
-
-    this.setState({
-      choosedFilter: typeOfCats
-    })
-
-  }
-  render() {
-    const { products, category } = this.props;
-    const { choosedFilter } = this.state;
+import { faBasketballBall } from "@fortawesome/free-solid-svg-icons";
+import { faTwitter, faLinkedinIn, faGithub, faMediumM } from "@fortawesome/free-brands-svg-icons";
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Scrollchor from 'react-scrollchor';
 
 
-    let cats, categories = [];
+function App() {
+  
+  return (
+    <div className="App">
+      <Navbar bg="light" expand="lg" className="Nav">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <NavItem><Scrollchor to="#about">
+              <Link style={{paddingLeft:'10px',color:'#dcddde'}}>About</Link>
+            </Scrollchor></NavItem>
+            <NavItem><Scrollchor to="#experience">
+              <Link style={{paddingLeft:'10px',color:'#dcddde'}}>Experiences</Link>
+            </Scrollchor></NavItem>
+            <NavItem><Scrollchor to="#education">
+              <Link style={{paddingLeft:'10px',color:'#dcddde'}}>Skills</Link>
+            </Scrollchor></NavItem>
 
+            {/* <Nav.Link href="/projects">Projects</Nav.Link> */}
+            <Link style={{paddingLeft:'10px',color:'#dcddde'}} to='/projects'>Projects</Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      <div className='intro'>
+        <div id="about" className='first_container'>
+          <div className='name'>Hello, I'm Faeghe</div>
+          <div className='image_container'>
+            <img src={me} className='img' alt='profile' ></img>
+            <h1 className='h'>Faeghe Hajiabadi</h1>
+          </div>
+          <p className='paraghraph'>
+            A Passionated Front End Developer who loves learning, with good knowledge of user experience and a fan of fascinating user interfaces. Studied computer engineering as a top student. Also A book lover and a classic music follower.
+            </p>
+        </div>
+        <div id="experience">
+          <Partition work={true} />
+        </div>
 
-    cats = products.map(item => <img width='50%' src={item.url} />);
-    categories = category.map(item => <button onClick={this.chooseFilter.bind(this, item)} >{item.name}</button>);
+        <div className='container' id='education'>
+          <Skills />
+          <Education />
+          <h2 id='is' className='title'>Sample<br></br>Project Portfolio</h2>
+          <span className='skills'>
+            <a className='skills' href='/projects'>Let's See Some Projects I've worked on</a>
 
-
-    return (
-      <div className='container'>
-        <span className='column1'><Category categories={categories} /></span>
-        <span className='column2'><Feed cats={cats} /></span>
-
-
-        <button className='showMeMore' onClick={this.showMore.bind(this)}>show me more</button>
+          </span>
+        </div>
+        <div className='bookImageContainer'>
+          <div className='footer-container'>
+            <span className='quote-container'>
+              <h2 className='quote'>Roads go ever ever on,<br></br>
+                Over rock and under tree,<br></br>
+                By caves where never sun has shone,<br></br>
+                By streams that never find the sea<br></br>
+                -The Last Stage</h2>
+            </span>
+          </div>
+        </div>
+        <div className='socialMediaIconContainer'>
+          <p className='textSocial'>Also Find Me By:</p>
+          <i class="fas fa-basketball-ball"></i>
+          <a href='https://dribbble.com/Faeghe' className='icon'><FontAwesomeIcon icon={faBasketballBall} size="lg" className='icon' /></a>
+          <a href='https://twitter.com/faeghehaji?s=09'><FontAwesomeIcon icon={faTwitter} size="lg" className='icon' /></a>
+          <a href='https://www.linkedin.com/in/faeghe-hajiabadi/'><FontAwesomeIcon icon={faLinkedinIn} size="lg" className='icon' /></a>
+          <a href='https://github.com/faeghe-hajiabadi'> <FontAwesomeIcon icon={faGithub} size="lg" className='icon' /></a>
+          <a href='https://medium.com/@faeghe.hajiabadi'><FontAwesomeIcon icon={faMediumM} size="lg" className='icon' /></a>
+        </div>
       </div>
+    </div>
 
-
-
-
-    )
-  }
-
+  );
 }
 
-
-
-const mapDispatchToProps = dispatch => ({
-  loadProductData: (pageNumber, order) => {
-    dispatch(loadProductData(pageNumber, order));
-  },
-  loadCategory: (pageNumber, order) => {
-    dispatch(loadCategory(pageNumber, order));
-  },
-  deleteProducts: () => {
-    dispatch(deleteProducts());
-  }
-});
-const mapStateToProps = (state) => {
-
-  return ({
-
-    products: state.loadcats.products,
-    category: state.loadCategory.category,
-    lastLoadedPageNumber: state.loadcats.archivePage,
-  })
-};
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default App;

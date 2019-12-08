@@ -1,0 +1,30 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-content: center;
+  max-width: 662px;
+  padding: 0 20px;
+
+}
+.title{
+  font-family: "Playfair Display SC",serif;
+  color: #333;
+  text-align: justify;
+  text-align-last: left;
+  font-weight: bold; 
+  margin-top: 90px;
+  margin-bottom: 20px;
+
+  
+}
+.parts{
+  margin-left: 0px;
+
+}
+.skills{
+  font-family: "Playfair Display SC",serif;
+  color: #8c8c8c;
+  text-align: justify;
+  text-align-last: left;
+}
