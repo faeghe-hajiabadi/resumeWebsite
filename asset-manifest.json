@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "/test/static/css/main.edd9e2d1.chunk.css",
-    "main.js": "/test/static/js/main.27edaacd.chunk.js",
-    "main.js.map": "/test/static/js/main.27edaacd.chunk.js.map",
-    "runtime~main.js": "/test/static/js/runtime~main.6dfd2fed.js",
-    "runtime~main.js.map": "/test/static/js/runtime~main.6dfd2fed.js.map",
-    "static/js/2.aaf7b422.chunk.js": "/test/static/js/2.aaf7b422.chunk.js",
-    "static/js/2.aaf7b422.chunk.js.map": "/test/static/js/2.aaf7b422.chunk.js.map",
+    "main.css": "/test/static/css/main.4b34006a.chunk.css",
+    "main.js": "/test/static/js/main.f6cac99e.chunk.js",
+    "main.js.map": "/test/static/js/main.f6cac99e.chunk.js.map",
+    "runtime-main.js": "/test/static/js/runtime-main.38a1b1aa.js",
+    "runtime-main.js.map": "/test/static/js/runtime-main.38a1b1aa.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/test/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.19473a0f.chunk.js": "/test/static/js/2.19473a0f.chunk.js",
+    "static/js/2.19473a0f.chunk.js.map": "/test/static/js/2.19473a0f.chunk.js.map",
     "index.html": "/test/index.html",
-    "precache-manifest.c1140c70a3a68cfda14389b6d62831bf.js": "/test/precache-manifest.c1140c70a3a68cfda14389b6d62831bf.js",
+    "precache-manifest.889aa58ef9a691096db02a36a908b0bc.js": "/test/precache-manifest.889aa58ef9a691096db02a36a908b0bc.js",
     "service-worker.js": "/test/service-worker.js",
-    "static/css/main.edd9e2d1.chunk.css.map": "/test/static/css/main.edd9e2d1.chunk.css.map"
+    "static/css/2.17e5ed98.chunk.css.map": "/test/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.4b34006a.chunk.css.map": "/test/static/css/main.4b34006a.chunk.css.map",
+    "static/media/Group2.png": "/test/static/media/Group2.4b2664b3.png",
+    "static/media/App.css": "/test/static/media/book.7f6b8a7b.png",
+    "static/media/me.png": "/test/static/media/me.30a7147a.png",
+    "static/media/rahnema.png": "/test/static/media/rahnema.59d0fce0.png",
+    "static/media/Project.css": "/test/static/media/react native.8584893f.jpeg",
+    "static/media/salam.png": "/test/static/media/salam.1852a6f6.png"
   }
 }
