@@ -1,5 +1,5 @@
 {
-  "homepage": "https://faeghe-hajiabadi.github.com/test",
+  "homepage": "https://faeghe-hajiabadi.github.com/resumeWebsite",
   "name": "eagronom-test",
   "version": "0.1.0",
   "private": true,
@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "jest",
     "predeploy": "npm run build",
-    "deploy": "npm run build&&gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "test:watch": "npm test -- --watch",
     "test:coverage": "jest --coverage",
     "eject": "react-scripts eject"
@@ -47,6 +47,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.4.0",
+    "gh-pages": "^2.1.1",
     "jest-cli": "24.8.0",
     "redux-saga-test-plan": "^4.0.0-beta.2"
   },
